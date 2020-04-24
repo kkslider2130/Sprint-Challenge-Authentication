@@ -39,12 +39,16 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is the purpose of using _sessions_?
+      Sessions helps persist a user by giving them a unique key piece that they can store in their browser (in a cookie for example) which can keep them authenticated if they decide to reload or exit the page. These keys are authenticated and matched with information we have about the client and their session stored on our server.
 
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+      bcrypt hashes the password and also decrypts it to verify so we don't have to store raw strings in our databases which would be easily compromised.
 
 - [ ] What does bcrypt do to slow down attackers?
+      bcrypt hashes the passwords in many iterations which you can specify in your code. This slows down the attempts that an attacker can potentially make.
 
 - [ ] What are the three parts of the JSON Web Token?
+      a json webtoken consists of the header, payload, and signature.
 
 ## Minimum Viable Product
 
@@ -62,3 +66,5 @@ Build a front end to show the jokes.
 
 - [ ] Add a React client that connects to the API and has pages for `Sign Up`, `Sign In` and showing a list of `Jokes`.
 - [ ] Once you have the functionality down, style it!
+
+**_front end at: https://codesandbox.io/s/node-3-react-test-fbc24_**
